@@ -1,4 +1,4 @@
-import UserSearch from "../../components/users/UserSearch";
+import UserSearch from "../../components/UserSearch";
 import trackingGif from "../../assets/tracking.gif";
 
 const UserLogin = () => {
