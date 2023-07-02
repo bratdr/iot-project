@@ -26,12 +26,6 @@ const SelectAccount = () => {
             <h1 className="text-xl font-bold">Admin</h1>
           </div>
         </div>
-        {/* <button
-          onClick={() => navigate("/login")}
-          className="text-white font-semibold w-32"
-        >
-          Login
-        </button> */}
       </div>
     </>
   );
