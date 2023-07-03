@@ -13,7 +13,7 @@ const UserSearch = () => {
           />
           <button
             onClick={() => navigate("/dashboard_user")}
-            className=" text-white bg-black border-l rounded-none hover:bg-slate-900"
+            className=" text-white bg-black border-l rounded-none hover:bg-rose-500 hover:text-black"
           >
             Find
           </button>
