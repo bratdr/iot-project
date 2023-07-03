@@ -22,7 +22,7 @@ const Dashboard = () => {
         <div className="z-10 absolute">
           <Navigation />
         </div>
-        <div className="w-screen ml-16 px-2 grid grid-cols-2 grid-rows-4 gap-2">
+        <div className="w-screen bg-slate-100 ml-16 px-2 grid grid-cols-2 grid-rows-4 gap-2">
           {/* Tracking Map */}
           <div className="border border-black flex flex-col bg-black col-span-2 row-span-2 sm:bg-white items-center sm:justify-center sm:gap-6">
             <h1 className="text-white py-2 text-sm font-bold sm:text-black sm:text-2xl">
