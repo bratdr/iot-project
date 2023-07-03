@@ -5,7 +5,7 @@ import { data_dashboard } from "../data/Dashboard";
 import { users } from "../data/Users";
 
 const Navigation = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const user = users.find((user) => user.id === "1");
 
   if (!user) {
@@ -18,14 +18,14 @@ const Navigation = () => {
       <div>
         <section className="flex gap-2">
           <div
-            className={`bg-[#fff] min-h-screen border border-l-0 border-y-0 border-black ${
-              open ? "w-screen sm:w-64 " : "w-16"
-            } duration-500 text-gray-100 px-4`}
+            className={`bg-[#000] min-h-screen border border-l-0 border-y-0 border-black ${
+              open ? "w-screen sm:w-screen bg-opacity-95" : "w-16"
+            } duration-1000 text-gray-100 px-4`}
           >
             <div className="py-3 flex justify-end">
               <HiMenuAlt3
                 size={26}
-                className="cursor-pointer text-black"
+                className="cursor-pointer text-white"
                 onClick={() => setOpen(!open)}
               />
             </div>
@@ -36,7 +36,8 @@ const Navigation = () => {
                   key={i}
                   className={` ${
                     data_ds?.margin && "mt-4"
-                  } group flex items-center text-sm gap-3.5 font-medium p-2 text-black hover:bg-gray-300 rounded-md`}
+                  } group flex items-center text-sm gap-3.5 font-medium p-2 text-white hover:text-rose-600 hover:bg-slate-100 rounded-md`}
+                  onClick={() => setOpen(!open)}
                 >
                   <div>
                     {React.createElement(data_ds?.icon, { size: "20" })}
@@ -46,7 +47,7 @@ const Navigation = () => {
                       style={{
                         transitionDelay: `${i + 3}00ms`,
                       }}
-                      className={`whitespace-pre text-black duration-500 ${
+                      className={`whitespace-pre text-rose-500 duration-500 ${
                         !open && "opacity-0 translate-x-28 overflow-hidden"
                       }`}
                     >
@@ -63,7 +64,7 @@ const Navigation = () => {
                       style={{
                         transitionDelay: `${i + 3}00ms`,
                       }}
-                      className={`whitespace-pre text-sm text-black duration-500 ${
+                      className={`whitespace-pre text-sm text-indigo-500 duration-500 ${
                         !open && "opacity-0 translate-x-28 overflow-hidden"
                       }`}
                     >
@@ -72,7 +73,7 @@ const Navigation = () => {
                     <p
                       className={`${
                         open && "hidden"
-                      } absolute left-48 bg-white font-medium whitespace-pre text-sm text-gray-900 rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 group-hover:left-14 group-hover:duration-300 group-hover:w-fit  `}
+                      } absolute left-48 bg-white font-medium whitespace-pre text-sm text-gray-900  rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 group-hover:left-14 group-hover:duration-300 group-hover:w-fit  `}
                     >
                       {data_ds?.desc}
                     </p>
