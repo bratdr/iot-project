@@ -1,26 +1,11 @@
-import { FaHistory } from "react-icons/fa";
+import { FaBus, FaHistory, FaUserAlt } from "react-icons/fa";
 import Navigation from "../../../components/Navigation";
-// import { drivers } from "../../../data/Drivers";
-// import { users } from "../../../data/Users";
 import { historys } from "../../../data/Historys";
+import { FaMapLocation, FaMapLocationDot } from "react-icons/fa6";
 
-const Dashboard = () => {
-  // const user = users.find((user) => user.id === "1");
-  // Fetch the users database with id as a key and define the users as user.
-  // const driver = drivers.find((driver) => driver.id === "1");
-  // Fetch the drivers database with id as a key and define the drivers as driver.
+const HistoryPage = () => {
   const history = historys.find((history) => history.id === "1");
   // Fetch the drivers database with id as a key and define the drivers as driver.
-
-  // if (!driver) {
-  //   // Handle case when driver is not found
-  //   return null;
-  // }
-
-  // if (!user) {
-  //   // Handle case when user is not found
-  //   return null;
-  // }
 
   if (!history) {
     // Handle case when user is not found
@@ -46,10 +31,31 @@ const Dashboard = () => {
                     <div key={history.id}>
                       <ul className="flex flex-col gap-1 p-3 text-sm outline outline-1 outline-black">
                         <li>No. {history.id}</li>
-                        <li>Tanggal : {history.date}</li>
-                        <li>Supir : {history.driver.name}</li>
-                        <li>Pickup :{history.pickup}</li>
-                        <li>Turun :{history.drop}</li>
+                        <li className="mb-2 flex flex-col items-center gap-2 text-center text-base font-medium">
+                          Tanggal : {history.date}
+                        </li>
+                        <p className="mb-4 text-center text-xs font-medium">
+                          Lokasi :
+                        </p>
+                        <li className="mb-2 flex flex-col items-center justify-center gap-2 text-center">
+                          <FaMapLocationDot />
+                          Naik : {history.pickup}
+                        </li>
+                        <li className="mb-4 flex flex-col items-center justify-center gap-2 text-center">
+                          <FaMapLocation />
+                          Turun : {history.drop}
+                        </li>
+                        <p className="mb-4 text-center text-xs font-medium">
+                          Kendaraan :
+                        </p>
+                        <li className="mb-2 flex flex-col items-center justify-center gap-2">
+                          <FaUserAlt />
+                          Supir : {history.driver.name}
+                        </li>
+                        <li className="mb-2 flex flex-col items-center justify-center gap-2">
+                          <FaBus />
+                          Plat Bus : {history.driver.buses}
+                        </li>
                       </ul>
                     </div>
                   ))}
@@ -63,4 +69,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default HistoryPage;
