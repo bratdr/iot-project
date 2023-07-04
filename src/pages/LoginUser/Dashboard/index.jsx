@@ -44,7 +44,7 @@ const Dashboard = () => {
             />
           </div>
           {/* Passagers Info */}
-          <div className="col-span-2 row-start-3 flex flex-col border border-black bg-slate-50 sm:col-auto sm:col-start-1 sm:row-span-2 sm:row-start-1 sm:overflow-clip sm:bg-white">
+          <div className="col-span-2 row-start-3 flex flex-col overflow-auto border border-black bg-slate-50 sm:col-auto sm:col-start-1 sm:row-span-2 sm:row-start-1 sm:overflow-clip sm:bg-white">
             <h1 className="flex flex-row items-center justify-center gap-2 bg-black p-2 text-xs font-medium text-white sm:text-base">
               <TbMoodKidFilled /> passager info :
             </h1>
@@ -95,7 +95,7 @@ const Dashboard = () => {
             </div>
           </div>
           {/* Driver Info */}
-          <div className="col-span-2 row-start-4 flex flex-col border border-black bg-slate-50 sm:col-auto sm:row-span-2 sm:row-start-3 sm:overflow-clip sm:bg-white">
+          <div className="col-span-2 row-start-4 flex flex-col overflow-auto border border-black bg-slate-50 sm:col-auto sm:row-span-2 sm:row-start-3 sm:overflow-clip sm:bg-white">
             <h1 className="flex flex-row items-center justify-center gap-2 bg-black p-2 text-xs font-medium text-white sm:text-base">
               <FaUserAlt /> driver info :
             </h1>
