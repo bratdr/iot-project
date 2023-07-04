@@ -14,14 +14,15 @@ export const data_dashboard = [
   {
     id: "0",
     name: "Tracking Position",
-    link: "/dashboard_user",
+    link: "/user/dashboard",
     icon: FaLocationDot,
   },
   {
     id: "1",
-    name: "ID Kartu",
-    desc: users.find((user) => user.id === "1")?.card_id,
-    icon: FaAddressCard,
+    name: "History",
+    link: "/user/dashboard/history",
+    icon: FaHistory,
+    margin: true,
   },
   {
     id: "2",
@@ -61,10 +62,9 @@ export const data_dashboard = [
   },
   {
     id: "8",
-    name: "History",
-    link: "/dashboard_user/history",
-    icon: FaHistory,
-    margin: true,
+    name: "ID Kartu",
+    desc: users.find((user) => user.id === "1")?.card_id,
+    icon: FaAddressCard,
   },
   { id: "9", name: "Logout", link: "/", icon: RiLogoutBoxRFill, margin: true },
 ];
