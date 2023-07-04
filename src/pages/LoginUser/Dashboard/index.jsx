@@ -5,7 +5,9 @@ import { users } from "../../../data/Users";
 
 const Dashboard = () => {
   const user = users.find((user) => user.id === "1");
+  // Fetch the users database with id as a key and define the users as user.
   const driver = drivers.find((driver) => driver.id === "1");
+  // Fetch the drivers database with id as a key and define the drivers as driver.
 
   if (!driver) {
     // Handle case when driver is not found
@@ -18,40 +20,40 @@ const Dashboard = () => {
   }
   return (
     <>
-      <div className="z-0 flex flex-row w-screen h-screen">
-        <div className="z-10 absolute">
+      <div className="z-0 flex h-screen w-screen flex-row">
+        <div className="absolute z-10">
           <Navigation />
         </div>
-        <div className="w-screen bg-slate-100 ml-16 px-2 grid grid-cols-2 grid-rows-4 gap-2">
+        <div className="ml-16 grid w-screen grid-cols-2 grid-rows-4 gap-2 bg-slate-100 px-2 py-2 sm:grid-cols-4 sm:bg-slate-300">
           {/* Tracking Map */}
-          <div className="border border-black flex flex-col bg-black col-span-2 row-span-2 sm:bg-white items-center sm:justify-center sm:gap-6">
-            <h1 className="text-white py-2 text-sm font-bold sm:text-black sm:text-2xl">
-              Tracking Location
+          <div className="col-span-2 row-span-2 flex flex-col items-center border border-black bg-black sm:col-span-3 sm:col-start-2 sm:row-span-4 sm:row-start-1 sm:justify-start sm:gap-6 sm:overflow-clip sm:rounded-xl sm:bg-slate-200">
+            <h1 className="py-2 text-center text-sm font-bold text-white sm:w-full sm:bg-black sm:text-lg sm:text-white">
+              Tracking Location :
             </h1>
             <img
-              className="object-cover w-fit h-full sm:w-96 sm:object-fill sm:h-80 sm:rounded-xl sm:border sm:border-black"
+              className="h-full w-fit object-cover sm:mt-6 sm:h-5/6 sm:w-auto sm:rounded-xl sm:border sm:border-black sm:object-cover"
               src={mapsIMG}
               alt="maps"
             />
           </div>
           {/* Passagers Info */}
-          <div className="border border-black flex flex-col bg-white col-span-2 row-start-3">
-            <h1 className="text-white text-xs font-medium p-2 bg-black">
+          <div className="col-span-2 row-start-3 flex flex-col border border-black bg-white sm:col-auto sm:col-start-1 sm:row-span-2 sm:row-start-1 sm:overflow-clip sm:rounded-xl sm:bg-slate-200">
+            <h1 className="bg-black p-2 text-xs font-medium text-white sm:text-base">
               passager info :
             </h1>
-            <div className="pt-4 pl-2 flex flex-col gap-2">
+            <div className="flex flex-col gap-2 pl-2 pt-4">
               <div className="flex flex-row items-center gap-6">
                 <h1 className="text-sm font-bold ">Name :</h1>
                 <p className="text-xs font-medium">{user.name}</p>
               </div>
             </div>
-            <div className="pt-4 pl-2 flex flex-col gap-2">
+            <div className="flex flex-col gap-2 pl-2 pt-2">
               <div className="flex flex-row items-center gap-4">
                 <h1 className="text-sm font-bold ">School :</h1>
                 <p className="text-xs font-medium">{user.school}</p>
               </div>
             </div>
-            <div className="pt-4 pl-2 flex flex-col gap-2">
+            <div className="flex flex-col gap-2 pl-2 pt-2">
               <div className="flex flex-row items-center gap-4">
                 <h1 className="text-sm font-bold ">ID Card :</h1>
                 <p className="text-xs font-medium">{user.card_id}</p>
@@ -59,11 +61,11 @@ const Dashboard = () => {
             </div>
           </div>
           {/* Driver Info */}
-          <div className="border border-black flex flex-col bg-white col-span-2 row-start-4">
-            <h1 className="text-white text-xs font-medium p-2 bg-black">
+          <div className="col-span-2 row-start-4 flex flex-col border border-black bg-white sm:col-auto sm:row-span-2 sm:row-start-3 sm:overflow-clip sm:rounded-xl sm:bg-slate-200">
+            <h1 className="bg-black p-2 text-xs font-medium text-white sm:text-base">
               driver info :
             </h1>
-            <div className="pt-4 pl-2 flex flex-col gap-2">
+            <div className="flex flex-col gap-2 pl-2 pt-4">
               <div className="flex flex-row items-center gap-6">
                 <h1 className="text-sm font-bold ">Name :</h1>
                 <p className="text-xs font-medium">{driver.name}</p>
