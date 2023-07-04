@@ -5,6 +5,7 @@ import LoginUser from "./pages/LoginUser";
 import Dashboard from "./pages/LoginUser/Dashboard";
 import AdminDashboard from "./pages/LoginAdmin/Dashboard";
 import History from "./pages/LoginUser/History";
+import TrackingKeys from "./pages/LoginUser/TrackingKey";
 
 function App() {
   return (
@@ -12,11 +13,12 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/admin_login" element={<LoginAdmin />} />
-          <Route path="/user_login" element={<LoginUser />} />
-          <Route path="/dashboard_user" element={<Dashboard />} />
-          <Route path="/dashboard_admin" element={<AdminDashboard />} />
-          <Route path="/dashboard_user/history" element={<History />} />
+          <Route path="/login/admin" element={<LoginAdmin />} />
+          <Route path="/login/user" element={<LoginUser />} />
+          <Route path="/login/user/keys" element={<TrackingKeys />} />
+          <Route path="/user/dashboard" element={<Dashboard />} />
+          <Route path="/user/dashboard/history" element={<History />} />
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
         </Routes>
       </Router>
     </>
