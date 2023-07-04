@@ -1,3 +1,5 @@
+import ktm from "../assets/ktm.jpeg"; // change the ktm from your databases
+
 export const users = [
   {
     id: "1",
@@ -5,6 +7,9 @@ export const users = [
     card_id: "10A98DB321",
     school: "Politeknik Negri jakarta",
     parent: "Jahmal",
+    pickup: "Halte UI",
+    drop: "Stasiun UI",
+    ktm_card: ktm,
   },
   {
     id: "2",
@@ -12,6 +17,9 @@ export const users = [
     card_id: "05A89EX561",
     school: "Politeknik Negri jakarta",
     parent: "Asep Mahal",
+    pickup: "Politeknik Negri Jakarta",
+    drop: "Halte Kutek UI",
+    ktm_card: ktm,
   },
   {
     id: "3",
@@ -19,5 +27,8 @@ export const users = [
     card_id: "A2G25TE456",
     school: "Politeknik Negri jakarta",
     parent: "Nurhaman MJ",
+    pickup: "Halte Stasiun UI",
+    drop: "Halte Lenteng Agung",
+    ktm_card: ktm,
   },
 ];
