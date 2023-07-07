@@ -1,11 +1,138 @@
-const ManageUser = () => {
+import { users } from "../../../data/Users";
+import Navigation from "../../../components/AdminNav";
+import { useNavigate } from "react-router-dom";
+import { FaUser } from "react-icons/fa6";
+
+const UsersTable = () => {
+  const navigate = useNavigate();
+
   return (
     <>
-      <div>
-        <h1>ManageUser</h1>
+      <div className="z-0 flex h-screen w-screen flex-row">
+        <div className="absolute z-10">
+          <Navigation />
+        </div>
+        <div className="ml-24 mr-8 flex w-full flex-col items-center justify-center overflow-x-auto px-0 sm:w-full">
+          <div className="w-full">
+            <div className="mb-4">
+              <h2 className="mb-8 text-4xl font-bold">Users Management</h2>
+              <button className="flex flex-row items-center justify-center gap-4 rounded-md bg-black text-sm font-semibold text-white outline outline-1 outline-gray-200 hover:bg-white hover:text-black">
+                <FaUser size={16} />
+                Add User
+              </button>
+            </div>
+            <div className="overflow-scroll border-b border-gray-200 shadow sm:overflow-hidden sm:rounded-lg">
+              <table className="min-w-full divide-y divide-gray-200">
+                <thead className="bg-gray-50">
+                  <tr>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                    >
+                      ID
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                    >
+                      Name
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                    >
+                      Parent
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                    >
+                      Card ID
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                    >
+                      School
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                    >
+                      KTM Card
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                    >
+                      Actions
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200 bg-white">
+                  {users.map((user) => (
+                    <tr key={user.id}>
+                      <td className="whitespace-nowrap px-6 py-4">
+                        <div className="text-sm text-gray-900">{user.id}</div>
+                      </td>
+                      <td className="whitespace-nowrap px-6 py-4">
+                        <div className="text-sm text-gray-900">{user.name}</div>
+                      </td>
+                      <td className="whitespace-nowrap px-6 py-4">
+                        <div className="text-sm text-gray-900">
+                          {user.parent}
+                        </div>
+                      </td>
+                      <td className="whitespace-nowrap px-6 py-4">
+                        <div className="text-sm text-gray-900">
+                          {user.card_id}
+                        </div>
+                      </td>
+                      <td className="whitespace-nowrap px-6 py-4">
+                        <div className="text-sm text-gray-900">
+                          {user.school}
+                        </div>
+                      </td>
+                      <td className="whitespace-nowrap px-6 py-4">
+                        <img
+                          src={user.ktm_card}
+                          alt="KTM Card"
+                          className="h-8 w-8 sm:h-14 sm:w-24"
+                        />
+                      </td>
+                      <td className="whitespace-nowrap px-6 py-4">
+                        <div className="flex gap-2 text-sm">
+                          <button
+                            onClick={() =>
+                              navigate("/admin/dashboard/user/view")
+                            }
+                            className="bg-slate-100 text-gray-900 hover:text-blue-800"
+                          >
+                            View
+                          </button>
+                          <button
+                            onClick={() =>
+                              navigate("/admin/dashboard/user/edit")
+                            }
+                            className="bg-sky-300 text-gray-900 hover:text-sky-800"
+                          >
+                            Edit
+                          </button>
+                          <button className="bg-rose-500 text-white hover:text-red-800">
+                            Delete
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
 };
 
-export default ManageUser;
+export default UsersTable;
