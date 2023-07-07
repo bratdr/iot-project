@@ -8,7 +8,7 @@ import {
   FaLocationDot,
 } from "react-icons/fa6";
 import { users } from "../data/Users";
-import { drivers } from "../data/Drivers";
+import { buses } from "./Buses";
 
 export const data_dashboard = [
   {
@@ -39,25 +39,25 @@ export const data_dashboard = [
   {
     id: "4",
     name: "Posisi Naik",
-    desc: "Politeknik Negri Jakarta",
+    desc: buses.find((bus) => bus.id === "1")?.pickup,
     icon: FaMapLocationDot,
   },
   {
     id: "5",
     name: "Posisi Turun",
-    desc: "Halte Universitas Indonesia",
+    desc: buses.find((bus) => bus.id === "1")?.drop,
     icon: FaMapLocation,
   },
   {
     id: "6",
     name: "Bus Info",
-    desc: drivers.find((user) => user.id === "1")?.buses,
+    desc: buses.find((bus) => bus.id === "1")?.nopol,
     icon: BiSolidBusSchool,
   },
   {
     id: "7",
     name: "Driver",
-    desc: drivers.find((user) => user.id === "1")?.name,
+    desc: buses.find((bus) => bus.id === "1")?.driver,
     icon: FaUserAlt,
   },
   {
