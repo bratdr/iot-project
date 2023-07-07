@@ -7,10 +7,13 @@ import AdminDashboard from "./pages/LoginAdmin/Dashboard";
 import History from "./pages/LoginUser/History";
 import TrackingKeys from "./pages/LoginUser/TrackingKey";
 import ManageUser from "./pages/LoginAdmin/ManageUser";
-import ViewUser from "./pages/LoginAdmin/ManageUser/View";
 import EditUser from "./pages/LoginAdmin/ManageUser/Edit";
 import ManageDriver from "./pages/LoginAdmin/ManageDriver";
+import EditDriver from "./pages/LoginAdmin/ManageDriver/Edit";
 import ManageSchool from "./pages/LoginAdmin/ManageSchool";
+import EditSchool from "./pages/LoginAdmin/ManageSchool/Edit";
+import ManageBuses from "./pages/LoginAdmin/ManageBuses";
+import EditBuses from "./pages/LoginAdmin/ManageBuses/Edit";
 
 function App() {
   return (
@@ -25,10 +28,13 @@ function App() {
           <Route path="/user/dashboard/history" element={<History />} />
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
           <Route path="/admin/dashboard/user" element={<ManageUser />} />
-          <Route path="/admin/dashboard/user/view" element={<ViewUser />} />
           <Route path="/admin/dashboard/user/edit" element={<EditUser />} />
           <Route path="/admin/dashboard/driver" element={<ManageDriver />} />
+          <Route path="/admin/dashboard/driver/edit" element={<EditDriver />} />
           <Route path="/admin/dashboard/school" element={<ManageSchool />} />
+          <Route path="/admin/dashboard/school/edit" element={<EditSchool />} />
+          <Route path="/admin/dashboard/buses/" element={<ManageBuses />} />
+          <Route path="/admin/dashboard/buses/edit" element={<EditBuses />} />
         </Routes>
       </Router>
     </>
