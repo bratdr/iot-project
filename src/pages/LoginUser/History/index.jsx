@@ -8,7 +8,7 @@ const HistoryPage = () => {
   // Fetch the drivers database with id as a key and define the drivers as driver.
 
   if (!history) {
-    // Handle case when user is not found
+    // Handle case when history is not found
     return null;
   }
 
@@ -50,11 +50,11 @@ const HistoryPage = () => {
                         </p>
                         <li className="mb-2 flex flex-col items-center justify-center gap-2">
                           <FaUserAlt />
-                          Supir : {history.driver.name}
+                          Supir : {history.driver}
                         </li>
                         <li className="mb-2 flex flex-col items-center justify-center gap-2">
                           <FaBus />
-                          Plat Bus : {history.driver.buses}
+                          Plat Bus : {history.plat}
                         </li>
                       </ul>
                     </div>
