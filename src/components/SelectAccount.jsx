@@ -13,14 +13,14 @@ const SelectAccount = () => {
         <div className="flex gap-3">
           <div
             onClick={() => navigate("/login/user")}
-            className="flex w-1/2 flex-col items-center justify-center gap-7 overflow-hidden px-4 py-6 outline outline-1 outline-slate-300 hover:outline-slate-700"
+            className="flex w-1/2 flex-col items-center justify-center gap-7 overflow-hidden px-4 py-6 outline outline-1 outline-slate-300 hover:bg-rose-500 hover:text-white hover:outline-slate-700"
           >
             <img src={userGif} alt="my-gif" />
             <h1 className="text-xl font-bold">User</h1>
           </div>
           <div
             onClick={() => navigate("/login/admin")}
-            className="flex w-1/2 flex-col items-center justify-center gap-7 overflow-hidden px-4 py-6 outline outline-1 outline-slate-300 hover:outline-slate-700"
+            className="flex w-1/2 flex-col items-center justify-center gap-7 overflow-hidden px-4 py-6 outline outline-1 outline-slate-300 hover:bg-rose-500 hover:text-white hover:outline-slate-700"
           >
             <img src={adminGif} alt="my-gif" />
             <h1 className="text-xl font-bold">Admin</h1>
