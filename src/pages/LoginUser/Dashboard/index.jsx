@@ -1,6 +1,6 @@
 import Navigation from "../../../components/Navigation";
 import mapsIMG from "../../../assets/Union.png";
-import { drivers } from "../../../data/Drivers";
+import { buses } from "../../../data/Buses";
 import { users } from "../../../data/Users";
 import { TbMoodKidFilled } from "react-icons/tb";
 import { FaAddressCard, FaSchool, FaUserAlt } from "react-icons/fa";
@@ -11,12 +11,12 @@ import {
 } from "react-icons/fa6";
 
 const Dashboard = () => {
+  const bus = buses.find((bus) => bus.id === "1");
+  // Fetch the buses database with id as a key and define the users as bus.
   const user = users.find((user) => user.id === "1");
   // Fetch the users database with id as a key and define the users as user.
-  const driver = drivers.find((driver) => driver.id === "1");
-  // Fetch the drivers database with id as a key and define the drivers as driver.
 
-  if (!driver) {
+  if (!bus) {
     // Handle case when driver is not found
     return null;
   }
@@ -72,7 +72,7 @@ const Dashboard = () => {
                   <FaMapLocationDot color="red" />
                   Pickup Point :
                 </h1>
-                <p className="text-xs font-medium">{user.pickup}</p>
+                <p className="text-xs font-medium">{bus.pickup}</p>
               </div>
             </div>
             <div className="flex flex-col gap-4 px-4">
@@ -81,7 +81,7 @@ const Dashboard = () => {
                   <FaMapLocation color="red" />
                   Drop Point :
                 </h1>
-                <p className="text-xs font-medium">{user.drop}</p>
+                <p className="text-xs font-medium">{bus.drop}</p>
               </div>
             </div>
             <div className="hidden flex-col gap-4 px-4 pt-4 sm:block">
@@ -105,7 +105,7 @@ const Dashboard = () => {
                   <TbMoodKidFilled color="red" />
                   Name :
                 </h1>
-                <p className="text-xs font-medium">{driver.name}</p>
+                <p className="text-xs font-medium">{bus.driver}</p>
               </div>
             </div>
             <div className="flex flex-col gap-4 px-4">
@@ -114,7 +114,7 @@ const Dashboard = () => {
                   <FaSchool color="red" />
                   Buses :
                 </h1>
-                <p className="text-xs font-medium">{driver.buses}</p>
+                <p className="text-xs font-medium">{bus.nopol}</p>
               </div>
             </div>
             <div className="flex flex-col gap-4 px-4 ">
@@ -123,7 +123,7 @@ const Dashboard = () => {
                   <FaAddressCard color="red" />
                   Start Location :
                 </h1>
-                <p className="text-xs font-medium">{driver.pickup}</p>
+                <p className="text-xs font-medium">{bus.pickup}</p>
               </div>
             </div>
             <div className="flex flex-col gap-4 px-4 ">
@@ -132,14 +132,14 @@ const Dashboard = () => {
                   <FaAddressCard color="red" />
                   End Location :
                 </h1>
-                <p className="text-xs font-medium">{driver.drop}</p>
+                <p className="text-xs font-medium">{bus.drop}</p>
               </div>
             </div>
             <div className="hidden flex-col gap-4 px-4 pt-4 sm:block">
               <div className="flex h-40 flex-row items-center justify-center gap-4 bg-white p-2 shadow">
                 <img
                   className="h-full w-fit object-cover shadow shadow-sky-300 sm:w-auto sm:border sm:border-black sm:object-cover"
-                  src={driver.card_driver}
+                  src={bus.card_driver}
                   alt="sim"
                 />
               </div>
