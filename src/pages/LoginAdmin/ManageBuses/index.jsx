@@ -16,9 +16,12 @@ const ManageBuses = () => {
           <div className="w-full overflow-scroll">
             <div className="mb-4">
               <h2 className="pb-8 text-4xl font-bold">Buses Management</h2>
-              <button className="flex flex-row items-center justify-center gap-4 rounded-md bg-black text-sm font-semibold text-white outline outline-1 outline-gray-200 hover:bg-white hover:text-black">
+              <button
+                onClick={() => navigate("/admin/dashboard/buses/add")}
+                className="flex flex-row items-center justify-center gap-4 rounded-md bg-black text-sm font-semibold text-white outline outline-1 outline-gray-200 hover:bg-white hover:text-black"
+              >
                 <BiSolidBusSchool size={16} />
-                Add User
+                Add Buses
               </button>
             </div>
             <div className="overflow-x-scroll overflow-y-scroll border-b border-gray-200 shadow sm:overflow-hidden sm:rounded-lg">
