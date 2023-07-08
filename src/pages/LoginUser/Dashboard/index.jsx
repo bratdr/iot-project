@@ -84,15 +84,6 @@ const Dashboard = () => {
                 <p className="text-xs font-medium">{bus.drop}</p>
               </div>
             </div>
-            <div className="hidden flex-col gap-4 px-4 pt-4 sm:block">
-              <div className="flex h-40 flex-row items-center justify-center gap-4 bg-white p-2 shadow">
-                <img
-                  className="h-full w-fit object-cover shadow shadow-sky-300 sm:w-auto sm:border sm:border-black sm:object-cover"
-                  src={user.ktm_card}
-                  alt="ktm"
-                />
-              </div>
-            </div>
           </div>
           {/* Driver Info */}
           <div className="col-span-2 row-start-4 flex flex-col overflow-auto border border-black bg-slate-50 sm:col-auto sm:row-span-2 sm:row-start-3 sm:overflow-clip sm:bg-white">
@@ -133,15 +124,6 @@ const Dashboard = () => {
                   End Location :
                 </h1>
                 <p className="text-xs font-medium">{bus.drop}</p>
-              </div>
-            </div>
-            <div className="hidden flex-col gap-4 px-4 pt-4 sm:block">
-              <div className="flex h-40 flex-row items-center justify-center gap-4 bg-white p-2 shadow">
-                <img
-                  className="h-full w-fit object-cover shadow shadow-sky-300 sm:w-auto sm:border sm:border-black sm:object-cover"
-                  src={bus.card_driver}
-                  alt="sim"
-                />
               </div>
             </div>
           </div>
