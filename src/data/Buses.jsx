@@ -8,6 +8,7 @@ export const buses = [
     nopol: "[ B 1234 JET ]",
     pickup: "Politeknik Negri Jakarta",
     drop: "Stadium Universitas Indonesia",
+    merk: "Toyota",
   },
   {
     id: "2",
@@ -16,6 +17,7 @@ export const buses = [
     nopol: "[ AB 1243 EJT ]",
     pickup: "Halte Universitas Indonesia",
     drop: "Politeknik Negri Jakarta",
+    merk: "BMW",
   },
   {
     id: "3",
@@ -24,5 +26,6 @@ export const buses = [
     nopol: "[ XB 1324 TJE ]",
     pickup: "Stasiun Universitas Indonesia",
     drop: "Kutek Universitas Indonesia",
+    merk: "Honda",
   },
 ];
