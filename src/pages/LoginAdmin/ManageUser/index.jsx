@@ -16,7 +16,10 @@ const UsersTable = () => {
           <div className="w-full overflow-scroll">
             <div className="mb-4">
               <h2 className="pb-8 text-4xl font-bold">Users Management</h2>
-              <button className="flex flex-row items-center justify-center gap-4 rounded-md bg-black text-sm font-semibold text-white outline outline-1 outline-gray-200 hover:bg-white hover:text-black">
+              <button
+                onClick={() => navigate("/admin/dashboard/user/add")}
+                className="flex flex-row items-center justify-center gap-4 rounded-md bg-black text-sm font-semibold text-white outline outline-1 outline-gray-200 hover:bg-white hover:text-black"
+              >
                 <FaUser size={16} />
                 Add User
               </button>
