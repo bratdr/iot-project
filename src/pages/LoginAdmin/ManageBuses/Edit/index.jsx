@@ -2,11 +2,10 @@ import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { buses } from "../../../../data/Buses";
 
-const EditBuses = () => {
+const ManageBuses = () => {
   const navigate = useNavigate();
   const [nopol, setNopol] = useState("");
-  const [pickup, setPickup] = useState("");
-  const [drop, setDrop] = useState("");
+  const [merk, setMerk] = useState("");
   const [driver, setDriver] = useState("");
   // const [ktmcard, setKtmCard] = useState("");
   const formRef = useRef(null);
@@ -18,8 +17,7 @@ const EditBuses = () => {
 
     // Reset form values
     setNopol("");
-    setPickup("");
-    setDrop("");
+    setMerk("");
     setDriver("");
 
     // Clear file input
@@ -34,7 +32,7 @@ const EditBuses = () => {
   return (
     <div className="flex h-screen w-screen flex-col items-center justify-center bg-slate-200 px-8">
       <div className="flex w-full flex-col rounded bg-slate-800 p-4 sm:w-3/6 xl:w-1/4">
-        <h1 className="text-3xl font-bold text-gray-50">Change Bus Data</h1>
+        <h1 className="text-3xl font-bold text-gray-50">Ubah Data Kendaraan</h1>
       </div>
       <div className="flex w-full flex-col rounded bg-slate-100 p-4 sm:w-3/6 xl:w-1/4">
         <form
@@ -51,7 +49,7 @@ const EditBuses = () => {
                 value={driver}
                 onChange={(e) => setDriver(e.target.value)}
               >
-                <option value="">Select new driver</option>
+                <option value="">Select the driver</option>
                 {buses.map((bus) => (
                   <option key={bus.id} value={bus.driver}>
                     {bus.driver}
@@ -71,33 +69,24 @@ const EditBuses = () => {
           </label>
 
           <label className="flex flex-col gap-2">
-            Police Number
+            Nopol
             <input
               className="rounded p-2 text-sm font-normal outline outline-1 outline-slate-200 focus:bg-sky-50 focus:duration-700"
               type="text"
-              placeholder="Enter the new police number"
+              placeholder="Enter the bus police number"
               value={nopol}
               onChange={(e) => setNopol(e.target.value)}
             />
           </label>
+
           <label className="flex flex-col gap-2">
-            Pickup Location
+            Merk
             <input
               className="rounded p-2 text-sm font-normal outline outline-1 outline-slate-200 focus:bg-sky-50 focus:duration-700"
               type="text"
-              placeholder="Enter the new first pickup location"
-              value={pickup}
-              onChange={(e) => setPickup(e.target.value)}
-            />
-          </label>
-          <label className="flex flex-col gap-2">
-            Drop Location
-            <input
-              className="rounded p-2 text-sm font-normal outline outline-1 outline-slate-200 focus:bg-sky-50 focus:duration-700"
-              type="text"
-              placeholder="Enter the new last stop location"
-              value={drop}
-              onChange={(e) => setDrop(e.target.value)}
+              placeholder="Enter the bus police number"
+              value={merk}
+              onChange={(e) => setMerk(e.target.value)}
             />
           </label>
 
@@ -119,4 +108,4 @@ const EditBuses = () => {
   );
 };
 
-export default EditBuses;
+export default ManageBuses;

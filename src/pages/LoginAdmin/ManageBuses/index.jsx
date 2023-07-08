@@ -38,31 +38,19 @@ const ManageBuses = () => {
                       scope="col"
                       className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
                     >
-                      Bus Driver
+                      Supir
                     </th>
                     <th
                       scope="col"
                       className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
                     >
-                      Police Number ( Nopol )
+                      Nopol
                     </th>
                     <th
                       scope="col"
                       className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
                     >
-                      Pickup
-                    </th>
-                    <th
-                      scope="col"
-                      className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
-                    >
-                      Drop
-                    </th>
-                    <th
-                      scope="col"
-                      className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
-                    >
-                      Driver License
+                      Merk
                     </th>
                     <th
                       scope="col"
@@ -87,19 +75,7 @@ const ManageBuses = () => {
                         <div className="text-sm text-gray-900">{bus.nopol}</div>
                       </td>
                       <td className="whitespace-nowrap px-6 py-4">
-                        <div className="text-sm text-gray-900">
-                          {bus.pickup}
-                        </div>
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4">
-                        <div className="text-sm text-gray-900">{bus.drop}</div>
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4">
-                        <img
-                          src={bus.card_driver}
-                          alt="KTM Card"
-                          className="h-8 w-8 sm:h-14 sm:w-24"
-                        />
+                        <div className="text-sm text-gray-900">{bus.merk}</div>
                       </td>
                       <td className="whitespace-nowrap px-6 py-4">
                         <div className="flex gap-2 text-sm">
