@@ -50,6 +50,12 @@ const ManageSchool = () => {
                       scope="col"
                       className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
                     >
+                      No. Telp
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                    >
                       Actions
                     </th>
                   </tr>
@@ -68,6 +74,11 @@ const ManageSchool = () => {
                       <td className="whitespace-nowrap px-6 py-4">
                         <div className="text-sm text-gray-900">
                           {school.alamat}
+                        </div>
+                      </td>
+                      <td className="whitespace-nowrap px-6 py-4">
+                        <div className="text-sm text-gray-900">
+                          {school.no_telp}
                         </div>
                       </td>
                       <td className="whitespace-nowrap px-6 py-4">

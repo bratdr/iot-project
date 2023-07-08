@@ -5,6 +5,7 @@ const AddSchool = () => {
   const navigate = useNavigate();
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
+  const [telephone, setTelephone] = useState("");
   // const [ktmcard, setKtmCard] = useState("");
   const formRef = useRef(null);
 
@@ -16,6 +17,7 @@ const AddSchool = () => {
     // Reset form values
     setName("");
     setAddress("");
+    setTelephone("");
 
     // Clear file input
     if (formRef.current) {
@@ -29,7 +31,7 @@ const AddSchool = () => {
   return (
     <div className="flex h-screen w-screen flex-col items-center justify-center bg-slate-200 px-8">
       <div className="flex w-full flex-col rounded bg-slate-800 p-4 sm:w-3/6 xl:w-1/4">
-        <h1 className="text-3xl font-bold text-gray-50">Add School Data</h1>
+        <h1 className="text-3xl font-bold text-gray-50">Tambah Data Sekolah</h1>
       </div>
       <div className="flex w-full flex-col rounded bg-slate-100 p-4 sm:w-3/6 xl:w-1/4">
         <form
@@ -38,7 +40,7 @@ const AddSchool = () => {
           ref={formRef}
         >
           <label className="flex flex-col gap-2">
-            University / School Name
+            Nama Sekolah / Universitas
             <input
               className="rounded p-2 text-sm font-normal outline outline-1 outline-slate-200 focus:bg-sky-50 focus:duration-700"
               type="text"
@@ -48,12 +50,22 @@ const AddSchool = () => {
             />
           </label>
           <label className="flex flex-col gap-2">
-            Address
+            Alamat
             <input
               className="rounded p-2 text-sm font-normal outline outline-1 outline-slate-200 focus:bg-sky-50 focus:duration-700"
               type="text"
               placeholder="Enter the address"
               value={address}
+              onChange={(e) => setAddress(e.target.value)}
+            />
+          </label>
+          <label className="flex flex-col gap-2">
+            No. Telp
+            <input
+              className="rounded p-2 text-sm font-normal outline outline-1 outline-slate-200 focus:bg-sky-50 focus:duration-700"
+              type="text"
+              placeholder="Enter the phone number"
+              value={telephone}
               onChange={(e) => setAddress(e.target.value)}
             />
           </label>
