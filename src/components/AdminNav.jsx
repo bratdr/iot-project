@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { data_dashboard } from "../data/AdminDashboard";
 
 const AdminNav = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   return (
     <>

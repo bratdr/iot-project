@@ -5,7 +5,7 @@ import { data_dashboard } from "../data/Dashboard";
 import { users } from "../data/Users";
 
 const Navigation = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const user = users.find((user) => user.id === "1");
 
   if (!user) {
