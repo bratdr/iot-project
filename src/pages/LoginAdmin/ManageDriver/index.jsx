@@ -21,7 +21,7 @@ const ManageDriver = () => {
                 className="flex flex-row items-center justify-center gap-4 rounded-md bg-black text-sm font-semibold text-white outline outline-1 outline-gray-200 hover:bg-white hover:text-black"
               >
                 <FaUser size={16} />
-                Add Driver
+                Tambah Supir
               </button>
             </div>
             <div className="overflow-x-scroll overflow-y-scroll border-b border-gray-200 shadow sm:overflow-hidden sm:rounded-lg">
@@ -38,13 +38,19 @@ const ManageDriver = () => {
                       scope="col"
                       className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
                     >
-                      Name
+                      Nama
                     </th>
                     <th
                       scope="col"
                       className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
                     >
-                      KTM Card
+                      Alamat
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                    >
+                      No. Telp
                     </th>
                     <th
                       scope="col"
@@ -66,11 +72,14 @@ const ManageDriver = () => {
                         </div>
                       </td>
                       <td className="whitespace-nowrap px-6 py-4">
-                        <img
-                          src={driver.card_driver}
-                          alt="KTM Card"
-                          className="h-8 w-8 sm:h-14 sm:w-24"
-                        />
+                        <div className="text-sm text-gray-900">
+                          {driver.alamat}
+                        </div>
+                      </td>
+                      <td className="whitespace-nowrap px-6 py-4">
+                        <div className="text-sm text-gray-900">
+                          {driver.no_telp}
+                        </div>
                       </td>
                       <td className="whitespace-nowrap px-6 py-4">
                         <div className="flex gap-2 text-sm">

@@ -4,15 +4,18 @@ import { useNavigate } from "react-router-dom";
 const AddDriver = () => {
   const navigate = useNavigate();
   const [name, setName] = useState("");
+  const [address, setAddress] = useState("");
+  const [telp, setTelp] = useState("");
   const formRef = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     // Perform form submission logic
 
     // Reset form values
     setName("");
+    setAddress("");
+    setTelp("");
 
     // Clear file input
     if (formRef.current) {
@@ -26,7 +29,7 @@ const AddDriver = () => {
   return (
     <div className="flex h-screen w-screen flex-col items-center justify-center bg-slate-200 px-8">
       <div className="flex w-full flex-col rounded bg-slate-800 p-4 sm:w-3/6 xl:w-1/4">
-        <h1 className="text-3xl font-bold text-gray-50">Add User Data</h1>
+        <h1 className="text-3xl font-bold text-gray-50">Tambah Data Supir</h1>
       </div>
       <div className="flex w-full flex-col rounded bg-slate-100 p-4 sm:w-3/6 xl:w-1/4">
         <form
@@ -35,7 +38,7 @@ const AddDriver = () => {
           ref={formRef}
         >
           <label className="flex flex-col gap-2">
-            Driver Name
+            Nama Supir
             <input
               className="rounded p-2 text-sm font-normal outline outline-1 outline-slate-200 focus:bg-sky-50 focus:duration-700"
               type="text"
@@ -45,18 +48,28 @@ const AddDriver = () => {
             />
           </label>
 
-          <div className="flex flex-col gap-2">
-            <label className="flex flex-col">Driver License</label>
+          <label className="flex flex-col gap-2">
+            No. Telp
             <input
-              className="block w-full cursor-pointer rounded border border-gray-300 bg-gray-50 p-4 text-sm text-gray-900 focus:outline-none"
-              id="default_size"
-              type="file"
-              // onChange={(e) => setKtmCard(e.target.files[0])}
+              className="rounded p-2 text-sm font-normal outline outline-1 outline-slate-200 focus:bg-sky-50 focus:duration-700"
+              type="text"
+              placeholder="0821-XXXX-XXXX"
+              value={telp}
+              onChange={(e) => setName(e.target.value)}
             />
-            <p className="text-xs text-gray-300">
-              SVG, PNG, JPG or GIF (MAX. 800x400px).
-            </p>
-          </div>
+          </label>
+
+          <label className="flex flex-col gap-2">
+            Alamat
+            <input
+              className="mb-4 rounded p-2 text-sm font-normal outline outline-1 outline-slate-200 focus:bg-sky-50 focus:duration-700"
+              type="text"
+              placeholder="Enter the driver address"
+              value={address}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </label>
+
           <div className="flex flex-col gap-2">
             <input
               className="rounded bg-sky-400 p-3 text-base font-semibold text-white hover:bg-sky-500 hover:duration-300"
