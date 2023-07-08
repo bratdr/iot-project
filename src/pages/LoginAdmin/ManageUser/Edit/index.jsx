@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const EditUser = () => {
   const navigate = useNavigate();
   const [name, setName] = useState("");
-  const [parent, setParent] = useState("");
+  const [nisn, setNisn] = useState("");
   const [school, setSchool] = useState("");
   // const [ktmcard, setKtmCard] = useState("");
   const formRef = useRef(null);
@@ -17,7 +17,7 @@ const EditUser = () => {
 
     // Reset form values
     setName("");
-    setParent("");
+    setNisn("");
     setSchool("");
 
     // Clear file input
@@ -32,7 +32,7 @@ const EditUser = () => {
   return (
     <div className="flex h-screen w-screen flex-col items-center justify-center bg-slate-200 px-8">
       <div className="flex w-full flex-col rounded bg-slate-800 p-4 sm:w-3/6 xl:w-1/4">
-        <h1 className="text-3xl font-bold text-gray-50">Change User Data</h1>
+        <h1 className="text-3xl font-bold text-gray-50">Ubah Data Siswa</h1>
       </div>
       <div className="flex w-full flex-col rounded bg-slate-100 p-4 sm:w-3/6 xl:w-1/4">
         <form
@@ -41,27 +41,27 @@ const EditUser = () => {
           ref={formRef}
         >
           <label className="flex flex-col gap-2">
-            Name
+            Nama
             <input
               className="rounded p-2 text-sm font-normal outline outline-1 outline-slate-200 focus:bg-sky-50 focus:duration-700"
               type="text"
-              placeholder="Enter the new name"
+              placeholder="Enter the name"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
           </label>
           <label className="flex flex-col gap-2">
-            Parent
+            Nisn
             <input
               className="rounded p-2 text-sm font-normal outline outline-1 outline-slate-200 focus:bg-sky-50 focus:duration-700"
               type="text"
-              placeholder="Enter the new parent name"
-              value={parent}
-              onChange={(e) => setParent(e.target.value)}
+              placeholder="Enter the nisn"
+              value={nisn}
+              onChange={(e) => setNisn(e.target.value)}
             />
           </label>
           <label className="flex flex-col gap-2">
-            School
+            Sekolah
             <div className="relative">
               <select
                 className="block w-full appearance-none rounded border border-slate-200 bg-white px-4 py-3 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
@@ -88,19 +88,7 @@ const EditUser = () => {
             </div>
           </label>
 
-          <div className="flex flex-col gap-2">
-            <label className="flex flex-col">Ktm Card</label>
-            <input
-              className="block w-full cursor-pointer rounded border border-gray-300 bg-gray-50 p-4 text-sm text-gray-900 focus:outline-none"
-              id="default_size"
-              type="file"
-              // onChange={(e) => setKtmCard(e.target.files[0])}
-            />
-            <p className="text-xs text-gray-300">
-              SVG, PNG, JPG or GIF (MAX. 800x400px).
-            </p>
-          </div>
-          <div className="flex flex-col gap-2">
+          <div className="mt-2 flex flex-col gap-2">
             <input
               className="rounded bg-sky-400 p-3 text-base font-semibold text-white hover:bg-sky-500 hover:duration-300"
               type="submit"

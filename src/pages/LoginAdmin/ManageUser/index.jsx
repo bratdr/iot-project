@@ -21,7 +21,7 @@ const UsersTable = () => {
                 className="flex flex-row items-center justify-center gap-4 rounded-md bg-black text-sm font-semibold text-white outline outline-1 outline-gray-200 hover:bg-white hover:text-black"
               >
                 <FaUser size={16} />
-                Add User
+                Tambah Siswa
               </button>
             </div>
             <div className="overflow-x-scroll overflow-y-scroll border-b border-gray-200 shadow sm:overflow-hidden sm:rounded-lg">
@@ -38,13 +38,13 @@ const UsersTable = () => {
                       scope="col"
                       className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
                     >
-                      Name
+                      Nama
                     </th>
                     <th
                       scope="col"
                       className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
                     >
-                      Parent
+                      Nisn
                     </th>
                     <th
                       scope="col"
@@ -56,13 +56,7 @@ const UsersTable = () => {
                       scope="col"
                       className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
                     >
-                      School
-                    </th>
-                    <th
-                      scope="col"
-                      className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
-                    >
-                      KTM Card
+                      Sekolah
                     </th>
                     <th
                       scope="col"
@@ -82,9 +76,7 @@ const UsersTable = () => {
                         <div className="text-sm text-gray-900">{user.name}</div>
                       </td>
                       <td className="whitespace-nowrap px-6 py-4">
-                        <div className="text-sm text-gray-900">
-                          {user.parent}
-                        </div>
+                        <div className="text-sm text-gray-900">{user.nisn}</div>
                       </td>
                       <td className="whitespace-nowrap px-6 py-4">
                         <div className="text-sm text-gray-900">
@@ -95,13 +87,6 @@ const UsersTable = () => {
                         <div className="text-sm text-gray-900">
                           {user.school}
                         </div>
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4">
-                        <img
-                          src={user.ktm_card}
-                          alt="KTM Card"
-                          className="h-8 w-8 sm:h-14 sm:w-24"
-                        />
                       </td>
                       <td className="whitespace-nowrap px-6 py-4">
                         <div className="flex gap-2 text-sm">
