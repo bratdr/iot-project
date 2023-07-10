@@ -5,7 +5,6 @@ import LoginUser from "./pages/LoginUser";
 import Dashboard from "./pages/LoginUser/Dashboard";
 import AdminDashboard from "./pages/LoginAdmin/Dashboard";
 import History from "./pages/LoginUser/History";
-import TrackingKeys from "./pages/LoginUser/TrackingKey";
 import ManageUser from "./pages/LoginAdmin/ManageUser";
 import AddUser from "./pages/LoginAdmin/ManageUser/Add";
 import EditUser from "./pages/LoginAdmin/ManageUser/Edit";
@@ -27,7 +26,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login/admin" element={<LoginAdmin />} />
           <Route path="/login/user" element={<LoginUser />} />
-          <Route path="/login/user/keys" element={<TrackingKeys />} />
+
           <Route path="/user/dashboard" element={<Dashboard />} />
           <Route path="/user/dashboard/history" element={<History />} />
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
